@@ -10,49 +10,33 @@ function Registro(){
   const [Telefono,setTelefono] = useState(0);
   const [Password,setPassword] = useState();
   const [ConfirmarPassword,setConfirmarPassword] = useState();
-
-  const RegistroInformacion = {
-
-    nombre : Nombre,
-    apellido : Apellido,
-    email : Email,
-    telefono : Telefono,
-    password : Password,
-    confirmarPassword : ConfirmarPassword
-  }
-
-  function EnviarRegistro(event){
-    
-    event.preventDefault()
-    console.log(RegistroInformacion)
-  }
-
+  
   return(
     <>
-      <form className="form-container" onSubmit={EnviarRegistro}>
-        <label for="nombre">
+      <form className="form-container" >
+        <label htmlFor="nombre">
           Nombre:
           <input id="nombre" className="nombre" type="text" onChange={(event)=>setNombre(event.target.value)}></input>
         </label>
-        <label for="apellido">
+        <label htmlFor="apellido">
           Apellido:
           <input id="apellido" className="apellido" type="text" onChange={(event)=>setApellido(event.target.value)}></input>
         </label>
-        <label for="email">
+        <label htmlFor="email">
           Email:
           <input id="email" className="email" type="email" onChange={(event)=>setEmail(event.target.value)}></input>
         </label>
-        <label for="telefono">
+        <label htmlFor="telefono">
           Telefono:
           <input id="telefono" className="telefono" type="number" onChange={(event)=>setTelefono(event.target.value)}></input>
         </label>
-        <label for="password">
+        <label htmlFor="password">
           Password:
           <input id="password" className="password" type="password" onChange={(event)=>setPassword(event.target.value)}></input>
         </label>
-        <label for="confirmar_password">
+        <label htmlFor="confirmar_password">
           Confirmar Password:
-          <input name="confirmar_password" className="confirmar_password" type="password" onChange={(event)=>setConfirmarPassword(event.target.value)}></input>
+          <input id="confirmar_password" className="confirmar_password" type="password" onChange={(event)=>setConfirmarPassword(event.target.value)}></input>
         </label>
         <button className="button" type="submit">Registrar</button>
       </form>

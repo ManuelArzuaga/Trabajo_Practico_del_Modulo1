@@ -6,7 +6,6 @@ import Registro from './Componentes/Registro'
 
 function App() {
   
-
   return (
     <>
       <Registro></Registro>
